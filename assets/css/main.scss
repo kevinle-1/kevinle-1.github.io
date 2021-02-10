@@ -1,0 +1,88 @@
+$accent: pink;
+
+.content {
+    max-width: 1000em;
+
+    margin-left: 20%;
+    margin-top: 5em;
+
+    font-family: 'Lato', sans-serif;
+}
+
+.top {
+    #logo {
+        width: 13em;
+    }
+
+    #headline {
+        margin-top: 0.5em;
+        font-size: 14pt;
+    }
+
+    .active {
+        #headline {
+            visibility: hidden;
+        }
+    }
+
+    margin-bottom: 3em;
+}
+
+.index {
+    font-size: 14pt;
+
+    ul {
+        list-style: none;
+        padding-left: 0;
+    }
+}
+
+a {
+    color: black;
+    text-decoration: none;
+
+    #arrow {
+        margin-left: 0.05em;
+        margin-bottom: -0.15em;
+
+        width: 1em;
+        height: 1em;
+
+        visibility: hidden;
+        opacity: 0;
+    }
+}
+
+a:hover {
+    text-decoration: underline;
+
+    #arrow {
+        visibility: visible;
+        opacity: 1;
+
+        transition: all 0.2s ease-in-out;
+    }
+}
+
+@media screen and (max-width: 30em) {
+    .content {
+        max-width: 100%;
+        margin: 2em;
+
+        li {
+            margin-bottom: 0.5em;
+        }
+
+        transition: all 0.15s ease-in-out;
+    }
+}
+
+::selection {
+    color: white;
+    background: black;
+}
+
+::-moz-selection {
+    color: white;
+    background: black;
+}
