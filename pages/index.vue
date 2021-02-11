@@ -12,7 +12,7 @@
             <li><a target="_blank" href="https://www.linkedin.com/in/kevinle14">linkedin<img id="arrow" src="~/assets/img/symbols/new.svg"/></a></li>
 
             <br/>
-            <li><a target="_blank" href="~/assets/files/kevin-le-resume-pub2021.pdf">résumé<img id="arrow" src="~/assets/img/symbols/new.svg"/></a></li>
+            <li><a target="_blank" href="/files/kevin-le-resume-pub2021.pdf">résumé<img id="arrow" src="~/assets/img/symbols/new.svg"/></a></li>
 
             <br/>
 
@@ -26,9 +26,6 @@ import $ from 'jquery'
 
 export default {
   mounted () {
-    const day = new Date()
-    const hr = day.getHours()
-
     $('.top #brand #subheading').attr('src', '')
     $('.top #brand').removeClass('active')
 
@@ -36,11 +33,6 @@ export default {
       $('.content').toggleClass('stealth')
       $('body').toggleClass('stealth')
     })
-
-    if ((hr >= 18 && hr <= 23) || (hr >= 0 && hr <= 7)) {
-      $('.content').toggleClass('stealth')
-      $('body').toggleClass('stealth')
-    }
   }
 }
 </script>
