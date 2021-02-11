@@ -1,8 +1,8 @@
 <template>
     <div class="index">
         <ul>
-            <li><a>blog<img id="arrow" src="~/assets/img/next.svg"/></a></li>
-            <li><a>projects<img id="arrow" src="~/assets/img/next.svg"/></a></li>
+            <li><NuxtLink to="/blog">blog<img id="arrow" src="~/assets/img/next.svg"/></NuxtLink></li>
+            <li><NuxtLink to="/projects">projects<img id="arrow" src="~/assets/img/next.svg"/></NuxtLink></li>
 
             <br/>
 
@@ -18,5 +18,12 @@
 </template>
 
 <script>
-export default {}
+import $ from 'jquery'
+
+export default {
+  mounted () {
+    $('.top #brand #subheading').attr('src', '')
+    $('.top #brand').removeClass('active')
+  }
+}
 </script>

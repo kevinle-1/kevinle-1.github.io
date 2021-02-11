@@ -2,6 +2,7 @@
     <div class="content">
         <TopBar/>
         <Nuxt/>
+        <p id="copyright">© 2021</p>
     </div>
 </template>
 

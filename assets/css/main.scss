@@ -1,28 +1,72 @@
 $accent: pink;
 
+.page-enter-active,
+.page-leave-active {
+    transition: opacity 0.15s;
+}
+
+.page-enter,
+.page-leave-to {
+    opacity: 0;
+}
+
 .content {
-    max-width: 1000em;
+    max-width: 60em;
 
     margin-left: 20%;
     margin-top: 5em;
 
     font-family: 'Lato', sans-serif;
+
+    #copyright {
+        padding-top: 4em;
+        color: lightgray;
+        font-size: 8pt;
+    }
 }
 
 .top {
-    #logo {
-        width: 13em;
+    #brand {
+        #logo {
+            margin-right: 1.5em;
+            height: 2.3em;
+        }
+
+        #subheading {
+            margin-bottom: -0.45em;
+            height: 2.8em;
+
+            visibility: hidden;
+            opacity: 0;
+        }
     }
+
+    #brand.active {
+        #logo {
+            margin-top: 0.05em; //Animation causes slight shift
+        }
+
+        #subheading {
+            visibility: visible;
+            opacity: 1;
+
+            transform: translateX(100%);
+            position: fixed;
+            animation: anim 2s 1;
+            transition: all 0.1s ease-in-out;
+
+            transform: translateX(0%);
+        }
+
+        #headline {
+            display: none;
+        }
+    }
+
 
     #headline {
         margin-top: 0.5em;
         font-size: 14pt;
-    }
-
-    .active {
-        #headline {
-            visibility: hidden;
-        }
     }
 
     margin-bottom: 3em;
@@ -85,4 +129,16 @@ a:hover {
 ::-moz-selection {
     color: white;
     background: black;
+}
+
+@keyframes anim {
+    0% {
+        transform: translateX(100%);
+    }
+    14.28% {
+        transform: translateX(0);
+    }
+    85.71% {
+        transform: translateX(0);
+    }
 }
