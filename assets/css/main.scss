@@ -19,10 +19,29 @@ $accent: pink;
     font-family: 'Lato', sans-serif;
 
     #copyright {
-        padding-top: 4em;
+        padding-top: 1em;
         color: lightgray;
         font-size: 8pt;
     }
+}
+
+.content {
+    transition: all 0.2s ease-in-out;
+}
+
+.content.stealth {
+    filter: invert(100%);
+    transition: all 0.2s ease-in-out;
+}
+
+body {
+    background-color: white;
+    transition: all 0.1s ease-in-out;
+}
+
+body.stealth {
+    background-color: black;
+    transition: all 0.2s ease-in-out;
 }
 
 .top {
@@ -52,8 +71,8 @@ $accent: pink;
 
             transform: translateX(100%);
             position: fixed;
-            animation: anim 2s 1;
-            transition: all 0.1s ease-in-out;
+            animation: anim 1s 1;
+            transition: all 0.2s ease-in-out;
 
             transform: translateX(0%);
         }
@@ -78,6 +97,13 @@ $accent: pink;
     ul {
         list-style: none;
         padding-left: 0;
+    }
+
+    #switch {
+        margin-top: 3em;
+        width: 1.5em;
+
+        cursor: pointer;
     }
 }
 

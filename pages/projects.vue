@@ -9,7 +9,7 @@ import $ from 'jquery'
 
 export default {
   mounted () {
-    $('.top #brand #subheading').attr('src', '/_nuxt/assets/img/projects.svg')
+    $('.top #brand #subheading').attr('src', '/headings/projects.svg')
     $('.top #brand').addClass('active')
   }
 }

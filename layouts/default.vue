@@ -2,7 +2,7 @@
     <div class="content">
         <TopBar/>
         <Nuxt/>
-        <p id="copyright">© 2021</p>
+        <p id="copyright">© {{ new Date().getFullYear() }}</p>
     </div>
 </template>
 
