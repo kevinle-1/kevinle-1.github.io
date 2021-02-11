@@ -12,12 +12,12 @@ export default {
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       { hid: 'description', name: 'description', content: 'Software Engineering & Cloud Technology Graduate' },
-      { name: 'og:title', content: 'Kevin Le'},
-      { name: 'og:description', content: 'Software Engineering & Cloud Technology Graduate'},
-      { name: 'og:type', content: 'website'},
-      { name: 'og:url', content: 'https://www.kevinle.com.au/'},
-      { name: 'og:image', content: 'https://i.imgur.com/98qrMUW.jpg'},
-      { name: 'theme-color', content: '#FFFFFF'},
+      { name: 'og:title', content: 'Kevin Le' },
+      { name: 'og:description', content: 'Software Engineering & Cloud Technology Graduate' },
+      { name: 'og:type', content: 'website' },
+      { name: 'og:url', content: 'https://www.kevinle.com.au/' },
+      { name: 'og:image', content: 'https://i.imgur.com/98qrMUW.jpg' },
+      { name: 'theme-color', content: '#FFFFFF' }
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.png' },
