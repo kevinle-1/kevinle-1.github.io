@@ -110,7 +110,7 @@ body.stealth {
 a {
     color: black;
     text-decoration: none;
-    outline: 0; 
+    outline: 0;
 
     #arrow {
         margin-left: 0.05em;
@@ -140,11 +140,27 @@ a:hover {
         max-width: 100%;
         margin: 2em;
 
+        margin-top: 5em;
+
         li {
             margin-bottom: 0.5em;
         }
 
         transition: all 0.15s ease-in-out;
+    }
+
+    .top {
+        #brand {
+            #logo {
+                margin-right: 1.5em;
+                height: 1.8em;
+            }
+
+            #subheading {
+                margin-bottom: -0.45em;
+                height: 2.3em;
+            }
+        }
     }
 }
 
