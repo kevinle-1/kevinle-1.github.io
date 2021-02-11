@@ -15,6 +15,6 @@ module.exports = {
   ],
   // add your custom rules here
   rules: {
-    'indent': 'off'
+    indent: 'off'
   }
 }
