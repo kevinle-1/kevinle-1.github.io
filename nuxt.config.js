@@ -16,7 +16,7 @@ export default {
       { name: 'og:description', content: 'Software Engineering & Cloud Technology Graduate' },
       { name: 'og:type', content: 'website' },
       { name: 'og:url', content: 'https://www.kevinle.com.au/' },
-      { name: 'og:image', content: 'https://kevinle.com.au/og.jpg' },
+      { name: 'og:image', content: 'https://i.imgur.com/98qrMUW.jpg' },
       { name: 'theme-color', content: '#FFFFFF' }
     ],
     link: [
