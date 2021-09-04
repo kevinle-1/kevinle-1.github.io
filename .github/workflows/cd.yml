@@ -24,11 +24,11 @@ jobs:
         run: yarn
 
       - name: Generate
-        run: yarn run generate
+        run: yarn build
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./dist
+          publish_dir: ./src/kevinle/build
           cname: kevinle.com.au
