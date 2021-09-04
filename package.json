@@ -1,32 +1,38 @@
 {
   "name": "kevinle",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "private": true,
-  "scripts": {
-    "dev": "nuxt",
-    "build": "nuxt build",
-    "start": "nuxt start",
-    "generate": "nuxt generate",
-    "lint:js": "eslint --ext \".js,.vue\" --ignore-path .gitignore .",
-    "lint": "npm run lint:js"
-  },
   "dependencies": {
-    "@nuxtjs/axios": "^5.12.5",
-    "core-js": "^3.8.3",
-    "jquery": "^3.5.1",
-    "nuxt": "^2.14.12"
+    "cra-template": "1.1.2",
+    "node-sass": "^4.14.1",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-fade-in": "^2.0.1",
+    "react-scripts": "4.0.3",
+    "styled-components": "^5.3.1"
   },
-  "devDependencies": {
-    "@nuxtjs/eslint-config": "^5.0.0",
-    "@nuxtjs/eslint-module": "^3.0.2",
-    "babel-eslint": "^10.1.0",
-    "eslint": "^7.18.0",
-    "eslint-plugin-nuxt": "^2.0.0",
-    "eslint-plugin-vue": "^7.5.0",
-    "fibers": "^5.0.0",
-    "pug": "^3.0.0",
-    "pug-plain-loader": "^1.1.0",
-    "sass": "^1.32.7",
-    "sass-loader": "^10.1.1"
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
   }
 }
