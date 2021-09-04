@@ -1,0 +1,18 @@
+{
+  "files": {
+    "main.css": "/static/css/main.df046e7c.chunk.css",
+    "main.js": "/static/js/main.c6d6b1ae.chunk.js",
+    "runtime-main.js": "/static/js/runtime-main.36895e1b.js",
+    "static/js/2.222fbf88.chunk.js": "/static/js/2.222fbf88.chunk.js",
+    "index.html": "/index.html",
+    "static/js/2.222fbf88.chunk.js.LICENSE.txt": "/static/js/2.222fbf88.chunk.js.LICENSE.txt",
+    "static/media/leaves.0f4774a5.png": "/static/media/leaves.0f4774a5.png",
+    "static/media/wordmark.15e80509.svg": "/static/media/wordmark.15e80509.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.36895e1b.js",
+    "static/js/2.222fbf88.chunk.js",
+    "static/css/main.df046e7c.chunk.css",
+    "static/js/main.c6d6b1ae.chunk.js"
+  ]
+}
