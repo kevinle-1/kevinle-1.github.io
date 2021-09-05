@@ -93,7 +93,7 @@ function App() {
             </div>
 
           <div className="leaves">
-            <img src={leaves} alt="Leaves"/>
+            <img title="Paul Weaver via Unsplash" src={leaves} alt="Leaves"/>
           </div>
         </div>
       </ThemeProvider>
