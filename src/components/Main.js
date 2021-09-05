@@ -16,7 +16,10 @@ function App() {
 
   useEffect(() => {
     const localTheme = window.localStorage.getItem('dark');
-    localTheme === "false" ? toggleTheme(true) : toggleTheme(false);
+    
+    if(localTheme !== null){
+      localTheme === "false" ? toggleTheme(true) : toggleTheme(false);
+    }
   }, []);
 
   function randomEmojis() {
