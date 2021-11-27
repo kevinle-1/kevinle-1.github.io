@@ -12,12 +12,6 @@ import { GlobalStyles } from '../styles/global';
 import FadeIn from 'react-fade-in';
 
 function App() {
-
-  const imageList = [leaves, wordmark]
-  imageList.forEach((image) => {
-      new Image().src = image
-  });
-
   const defaultHeadline = "SOFTWARE ENGINEER";
 
   useEffect(() => {
@@ -60,6 +54,8 @@ function App() {
     }
   }
 
+  const [leavesLoaded, setLeavesLoaded] = useState(false);
+
   const [headline, setHeadline] = useState(defaultHeadline);
 
   const [theme, setTheme] = useState("1");
@@ -98,8 +94,11 @@ function App() {
               <p id="copyright">© {new Date().getFullYear()}</p>
             </div>
 
-          <div className="leaves">
-            <img title="Paul Weaver via Unsplash" src={leaves} alt="Leaves"/>
+          <div id="leaves" className={leavesLoaded ? "fadeIn loaded" : ""}>
+            <img title="Paul Weaver via Unsplash" src={leaves}
+                 alt="Leaves" 
+                 style={leavesLoaded ? {} : { display: 'none' }} 
+                 onLoad={() => setLeavesLoaded(true)}/>
           </div>
         </div>
       </ThemeProvider>

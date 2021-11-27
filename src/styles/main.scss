@@ -67,8 +67,8 @@ body {
         bottom: 4em;
     }  
 
-    .leaves {
-        animation: fadeIn 1s;
+    #leaves {
+        opacity: 0;
         z-index: -10;
 
         img {
@@ -84,12 +84,16 @@ body {
         right: 0px;
         bottom: 0px;
     }
+
+    #leaves.loaded {
+        opacity: 1;
+    }
 }
 
 @media only screen and (max-width: 600px) {
 
     .main {
-        .leaves {
+        #leaves {
         
             img {
                 width: 25em;
@@ -104,7 +108,7 @@ body {
 @media only screen and (max-width: 400px) {
 
     .main {
-        .leaves {
+        #leaves {
         
             img {
                 width: 20em;
@@ -113,7 +117,10 @@ body {
     }
 }
 
-@keyframes fadeIn {
-    0% {opacity: 0;}
-    100% {opacity: 1;}
+.fadeIn {
+    opacity: 0;
+    -moz-transition: opacity 1.5s;
+    -webkit-transition: opacity 1.5s;
+    -o-transition: opacity 1.5s;
+    transition: opacity 1.5s;
 }
