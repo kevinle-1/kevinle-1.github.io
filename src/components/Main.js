@@ -12,6 +12,12 @@ import { GlobalStyles } from '../styles/global';
 import FadeIn from 'react-fade-in';
 
 function App() {
+
+  const imageList = [leaves, wordmark]
+  imageList.forEach((image) => {
+      new Image().src = image
+  });
+
   const defaultHeadline = "SOFTWARE ENGINEER";
 
   useEffect(() => {
