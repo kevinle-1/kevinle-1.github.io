@@ -1,3 +1,5 @@
-# Kevin Le
+# Vite React TS Template
 
-Repository for my personal site. Currently just a place to present onward links to a variety of sites. 
+## Usage
+
+`yarn install && yarn run dev`

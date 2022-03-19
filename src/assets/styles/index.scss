@@ -1,0 +1,22 @@
+$primary-color: white;
+$secondary-color: black;
+
+body {
+  margin: 5em;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  color: $primary-color;
+  background-color: $secondary-color;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+::selection {
+  color: $secondary-color;
+  background: $primary-color;
+}

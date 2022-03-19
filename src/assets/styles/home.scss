@@ -1,0 +1,60 @@
+.home {
+    font-family: 'Archivo', sans-serif;
+    text-transform: uppercase;
+
+    font-size: 20pt;
+
+    display: flex;
+
+    .logo {
+        width: 2em;
+    }
+
+    .title {
+        .name {
+            margin-top: 2em;
+        }
+
+        .tag {
+            margin-top: 1em;
+        }
+    }
+
+    .content {
+        margin-top: 4.3em;
+        margin-left: 8em;
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .links {
+            margin-top: 1em;
+            margin-bottom: 1em;
+        }
+    }
+
+    #leaves {
+        width: 22em;
+        position: absolute;
+
+        bottom: 0;
+        right: 0;
+    }
+
+    .switch {
+        position: absolute;
+
+        bottom: 0;
+        left: 0;
+
+        margin: 3em;
+    }
+}
+
+// @font-face {
+//     font-family: Mabry;
+//     src: url("./mabry.otf") format("opentype");
+// }
