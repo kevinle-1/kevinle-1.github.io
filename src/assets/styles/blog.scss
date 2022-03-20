@@ -1,9 +1,8 @@
 @import "./variables.scss";
 
 .blog {
-    animation: fadein 0.5s;
-
     .entries {
+        animation: fadein 0.5s;
 
         ul {
             list-style: none;
@@ -16,7 +15,7 @@
                 display: flex;
 
                 .title {
-                    margin-left: 7em;
+                    margin-left: 5.5em;
                     width: 18em;
                 }
             }

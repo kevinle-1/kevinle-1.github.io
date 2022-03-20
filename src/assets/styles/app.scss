@@ -7,7 +7,7 @@
     font-size: 16pt;
 
     .container {
-        padding-top: 4em;
+        padding-top: $border;
     }
 
     .footer {
@@ -19,14 +19,15 @@
         bottom: 0;
         left: 0;
 
-        margin: 4em;
+        margin-left: 3.7em;
+        margin-bottom: $border;
 
         .switch {
             cursor: pointer;
         }
 
         .copy {
-            width: 4em;
+            width: $border;
 
             position: absolute;
             margin-left: $second-column;

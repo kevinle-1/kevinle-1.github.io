@@ -1,23 +1,55 @@
-import { useState } from 'react'
-import Fade from 'react-reveal/Fade';
-
+import { useEffect, useState } from 'react';
+import { Mode } from 'vite-plugin-markdown'
 import '../assets/styles/blog.scss';
+import posts from '../blog/posts.json';
+
+interface attribute {
+  date: string,
+  description: string,
+  title: string
+}
+
+async function getPostsAttributes(): Promise<attribute[]> {
+  const attributes: attribute[] = []
+
+  const post = await import(/* @vite-ignore */'../blog/posts/xbox-tv-plex.md');
+  attributes.push(post.attributes);
+
+
+  
+  // posts["posts"].map(async p => {
+  //   const post = await import(/* @vite-ignore */'../blog/posts/' + p );
+  //   attributes.push(post.attributes);
+  // });
+
+  return attributes;
+}
 
 function Blog() {
+  const [attributes, setAttributes] = useState<attribute[]>([]);
+
+  useEffect(() => {
+    getPostsAttributes().then(a =>{
+      setAttributes(a);
+    });
+  }, [])
+
+  //console.log(attributes);
   return (
     <div className="blog">
-      <div>Blog</div>
-
+      <div className="accent">Blog</div>
       <div className="entries">
         <ul>
-          <li className="entry first">
-            <div className="date">2022-03-20</div>
-            <div className="title"><a href="">Using an xbox tv tuner with tvheadend and plex on debian</a></div>
-          </li>
-          <li className="entry">
-            <div className="date">2022-03-20</div>
-            <div className="title"><a href="">monitoring a fronius solar inverter via grafana using telegraf and influxdb </a></div>
-          </li>
+          {
+            attributes.map((a, i) => {
+              return <li key={i} className="entry first">
+                <div className="date">{a.date}</div>
+                <div className="title">
+                  <a href="">{a.title}</a>
+                </div>
+              </li>;
+            })
+          }
         </ul>
       </div>
     </div>
