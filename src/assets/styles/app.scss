@@ -1,0 +1,31 @@
+.app {
+    font-family: 'Helvetica', 'Archivo', sans-serif;
+    font-size: 16pt;
+
+    .container {
+        padding-top: 4em;
+    }
+
+    .footer {
+        text-transform: uppercase;
+
+        display: flex;
+        position: absolute;
+
+        bottom: 0;
+        left: 0;
+
+        margin: 4em;
+
+        .switch {
+            cursor: pointer;
+        }
+
+        .copy {
+            width: 4em;
+
+            position: absolute;
+            margin-left: 15.5em;
+        }
+    }
+}
