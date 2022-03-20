@@ -1,5 +1,9 @@
+@import "./variables.scss";
+
 .app {
     font-family: 'Helvetica', 'Archivo', sans-serif;
+    text-transform: uppercase;
+
     font-size: 16pt;
 
     .container {
@@ -25,7 +29,7 @@
             width: 4em;
 
             position: absolute;
-            margin-left: 15.5em;
+            margin-left: $second-column;
         }
     }
 }

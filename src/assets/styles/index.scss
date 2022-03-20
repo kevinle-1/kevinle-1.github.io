@@ -1,16 +1,18 @@
 body {
     margin: 5em;
 
+    line-height: 0.99;
+
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-}
-
-code {
-    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-        monospace;
 }
 
 .logo {
     position: absolute;
     width: 2em;
+}
+
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
 }
