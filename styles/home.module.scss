@@ -1,0 +1,30 @@
+@import "_variables.scss";
+
+.home {
+  display: flex;
+
+  margin-top: $border;
+  margin-left: $border;
+}
+
+.title {
+  margin-top: $top-margin;
+}
+
+.content {
+  position: fixed;
+  
+  margin-top: $top-margin;
+  margin-left: $second-column;
+
+  ul {
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+  }
+
+  .links {
+      margin-top: $border;
+      margin-bottom: 1em;
+  }
+}

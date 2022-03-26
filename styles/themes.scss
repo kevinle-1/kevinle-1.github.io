@@ -1,0 +1,32 @@
+[data-theme='on'] body {
+    color: #000000;
+    background-color: #ffffff;
+    .accent { color: #000000; }
+
+    a { color: #000000; }
+
+    .button:hover { color: #ffffff; background: #000000; }
+    ::selection { color: #ffffff; background: #000000; }
+}
+
+[data-theme='off'] body {
+    color: #ffffff;
+    background-color: #000000;
+    .accent { color: #ffffff; }
+
+    a { color: #ffffff; }
+
+    .button:hover { color: #000000; background: #ffffff; }
+    ::selection { color: #000000; background: #ffffff; }
+}
+
+[data-theme='ikea'] body {
+    color: #FFFFFF;
+    background-color: #003399;
+    .accent { color: #FFCC00; }
+
+    a { color: #ffffff; }
+
+    .button:hover { color: #003399; background: #FFCC00; }
+    ::selection { color: #003399; background: #FFCC00; }
+}
