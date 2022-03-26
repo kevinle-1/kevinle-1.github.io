@@ -3,11 +3,16 @@
 html,
 body {
   font-family: 'Helvetica', 'Archivo', sans-serif;
-  line-height: 99%;
+  line-height: 99.9%;
+
   text-transform: uppercase;
 
   font-size: 16pt;
+  font-weight: 400;
+
   margin: 0;
+
+  transition: background 0.1s;
 }
 
 a {
@@ -26,5 +31,10 @@ a {
   position: absolute;
   //right: $border;
 
-  width: 2em;
+  width: 1.8em;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
 }

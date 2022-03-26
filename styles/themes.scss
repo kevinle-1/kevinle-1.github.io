@@ -1,3 +1,5 @@
+// TODO: There is alot of duplication here - Determine approach to cleanup (CSS-in-JS?)
+
 [data-theme='on'] body {
     color: #000000;
     background-color: #ffffff;
@@ -29,4 +31,48 @@
 
     .button:hover { color: #003399; background: #FFCC00; }
     ::selection { color: #003399; background: #FFCC00; }
+}
+
+[data-theme='nflx'] body {
+    color: #FFFFFF;
+    background-color: #000000;
+    .accent { color: #DB0000; }
+
+    a { color: #ffffff; }
+
+    .button:hover { color: #FFFFFF; background: #DB0000; }
+    ::selection { color: #FFFFFF; background: #DB0000; }
+}
+
+[data-theme='amzn'] body {
+    color: #FFFFFF;
+    background-color: #232F3E;
+    .accent { color: #FF9900; }
+
+    a { color: #ffffff; }
+
+    .button:hover { color: #232F3E; background: #FF9900; }
+    ::selection { color: #232F3E; background: #FF9900; }
+}
+
+[data-theme='spot'] body {
+    color: #FFFFFF;
+    background-color: #212121;
+    .accent { color: #1DB954; }
+
+    a { color: #ffffff; }
+
+    .button:hover { color: #212121; background: #1DB954; }
+    ::selection { color: #212121; background: #1DB954; }
+}
+
+[data-theme='aapl'] body {
+    color: #979797;
+    background-color: #EEEEEE;
+    .accent { color: #666666; }
+
+    a { color: #979797; }
+
+    .button:hover { color: #EEEEEE; background: #666666; }
+    ::selection { color: #EEEEEE; background: #666666; }
 }

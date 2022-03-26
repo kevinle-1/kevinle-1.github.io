@@ -7,7 +7,7 @@ function Footer() {
   const { theme, setTheme } = useTheme()
 
   const [themeIdx, setThemeIdx] = useState(0);
-  const themes = ["on", "off", "ikea"]
+  const themes = ["off", "on", "ikea", "nflx", "amzn", "spot", "aapl"]
 
   useEffect(() => setMounted(true), [])
 
@@ -23,9 +23,9 @@ function Footer() {
 
   return (
     <div className={styles.footer}>
-      <div className={styles.switch + " button"}
+      <div className={styles.switch + " button accent"}
           onClick={() => CycleTheme()}
-        >OFF</div>
+        >{theme}</div>
       <div className={styles.copy}>© {new Date().getFullYear()}</div>
     </div>
   )
