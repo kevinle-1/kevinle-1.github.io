@@ -1,4 +1,5 @@
 import type { NextPage } from 'next'
+
 import FadeIn from 'react-fade-in';
 import styles from '../../styles/z.module.scss'
 
@@ -9,21 +10,26 @@ import GitHub from '../../assets/img/social/github.svg'
 import LinkedIn from '../../assets/img/social/linkedin.svg'
 import Twitter from '../../assets/img/social/twitter.svg'
 import PageHead from '../_head';
+import { useTheme } from 'next-themes'
 
 const Copy: NextPage = () => {
+  const { theme, setTheme } = useTheme()
+  setTheme('dark');
+
   return (
     <div>
-      <PageHead description="Card"/>
+      <PageHead description="Card" appendName={false}/>
       <div className={styles.container}>
-        <FadeIn delay={200}>
-          <div id="title">Kevin Le</div>
+        <FadeIn delay={100}>
           <div id="k"><K/></div>
+          <div id="title">Kevin Le</div>
+          <img id="card" alt="card" src="/assets/img/card.png"/>
           <div id="socials">
             <span>
-              <Mail/>
-              <Twitter/>
-              <LinkedIn/>
-              <GitHub/>
+              <a href="mailto:hi@kevle.xyz"><Mail/></a>
+              {/* <a href="mailto:hi@kevle.xyz"><Twitter/></a>
+              <a href="mailto:hi@kevle.xyz"><LinkedIn/></a>
+              <a href="mailto:hi@kevle.xyz"><GitHub/></a> */}
             </span>
           </div>
         </FadeIn>

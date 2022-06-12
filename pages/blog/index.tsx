@@ -33,7 +33,7 @@ export const getStaticProps = () => {
 const Blog: NextPage = ({ posts }: any) => { // Sorry
   return (
     <div className={styles.blog}>
-      <PageHead pageName="Blog" description="Random posts"/>
+      <PageHead pageName="Blog" description="Random posts" appendName={true}/>
       <Header title="blog"/>
       <Sidebar sidebarOnly={false} mobileShowIcons={false}/>
 

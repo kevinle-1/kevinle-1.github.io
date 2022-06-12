@@ -3,12 +3,13 @@ import Head from 'next/head'
 interface HeadAttributes {
   pageName?: string, // Name of page (To appear in tab title also)
   description: string,
+  appendName: boolean,
   og?: string // Path or text to generate OpenGraph image
 }
 
 const PageHead = (props: HeadAttributes) => {
   const pageName = props.pageName != null ?
-    props.pageName + " - Kevin Le" :
+    props.pageName + (props.appendName ? " - Kevin Le" : "") : // Don't append
     "Kevin Le";
 
   const ogImage = props.og != null ?
@@ -19,6 +20,7 @@ const PageHead = (props: HeadAttributes) => {
     <Head>
       <title>{pageName}</title>
       <meta name="theme-color" content="#000000"/>
+      { props.appendName ? null : <meta property="og:site_name" content="Kevin Le"/>}
       <meta property="og:title" content={pageName} key="title"/>
       <meta property="og:description" content={props.description}/>
       <meta property="og:image" content={ogImage}/>

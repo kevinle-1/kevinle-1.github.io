@@ -48,7 +48,8 @@ export const Post = ({ frontmatter, content, slug }: any) => {
     <div className={styles.post}>
       <PageHead pageName={frontmatter.title}
         description={frontmatter.metaDesc}
-        og={frontmatter.title}/>
+        og={frontmatter.title}
+        appendName={false}/>
       <Header title={"blog"}/>
       <FadeIn>
         <div className="body">

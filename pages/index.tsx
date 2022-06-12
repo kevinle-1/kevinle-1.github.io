@@ -40,8 +40,7 @@ const Home: NextPage = () => {
 
   return (
     <div className={styles.container}>
-      <PageHead description="Software Engineer"/>
-
+      <PageHead description="Software Engineer" appendName={true}/>
       <Header title="Software Engineer"/>
       <Sidebar sidebarOnly={true} mobileShowIcons={true}/>
       <div className="links">
