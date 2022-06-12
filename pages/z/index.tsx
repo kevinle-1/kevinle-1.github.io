@@ -1,4 +1,5 @@
 import type { NextPage } from 'next'
+import Link from 'next/link'
 
 import FadeIn from 'react-fade-in';
 import styles from '../../styles/z.module.scss'
@@ -23,7 +24,7 @@ const Copy: NextPage = () => {
         <FadeIn delay={100}>
           <div id="k"><K/></div>
           <div id="title">Kevin Le</div>
-          <a href="/"><img id="card" alt="card" src="/assets/img/card.png"/></a>
+          <Link href="/"><img id="card" alt="card" src="/assets/img/card.png"/></Link>
           <div id="socials">
             <span>
               <a href="mailto:hi@kevle.xyz"><Mail/></a>
