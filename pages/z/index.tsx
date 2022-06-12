@@ -12,10 +12,14 @@ import LinkedIn from '../../assets/img/social/linkedin.svg'
 import Twitter from '../../assets/img/social/twitter.svg'
 import PageHead from '../_head';
 import { useTheme } from 'next-themes'
+import { useEffect } from 'react';
 
 const Copy: NextPage = () => {
   const { theme, setTheme } = useTheme()
-  setTheme('dark');
+
+  useEffect(() => {
+    setTheme('dark')}
+  ,[]);
 
   return (
     <div>
