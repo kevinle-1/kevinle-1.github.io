@@ -23,7 +23,7 @@ const Copy: NextPage = () => {
         <FadeIn delay={100}>
           <div id="k"><K/></div>
           <div id="title">Kevin Le</div>
-          <img id="card" alt="card" src="/assets/img/card.png"/>
+          <a href="/"><img id="card" alt="card" src="/assets/img/card.png"/></a>
           <div id="socials">
             <span>
               <a href="mailto:hi@kevle.xyz"><Mail/></a>

@@ -42,7 +42,7 @@ const readingTime = (text: string) => {
 }
 
 export const Post = ({ frontmatter, content, slug }: any) => {
-  const src = `https://github.com/kevinle-1/kevinle-1.github.io/tree/main/pages/blog/post/${slug}.md`;
+  const src = `https://github.com/kevinle-1/kevinle-1.github.io/blob/main/posts/${slug}.md?plain=1`;
 
   return (
     <div className={styles.post}>

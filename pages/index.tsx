@@ -51,9 +51,11 @@ const Home: NextPage = () => {
         )}
       </div>
 
-      <div className="chevron">
-        <Chevron/>
-      </div>
+      <Link href="/z">
+        <div className="chevron">
+          <Chevron/>
+        </div>
+      </Link>
     </div>
   )
 }
