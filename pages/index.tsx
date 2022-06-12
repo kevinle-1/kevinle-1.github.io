@@ -1,26 +1,60 @@
 import type { NextPage } from 'next'
-import Link from 'next/link'
-
 import styles from '../styles/Home.module.scss'
 
-import Tao from '../img/tao.svg'
+import Header from '../components/k/Header'
+import Sidebar from '../components/k/Sidebar'
 
-import Header from '../components/Header'
-import Greeting from '../components/Greeting'
+import Chevron from '../assets/img/chevron.svg'
+import Link from 'next/link'
+
+import PageHead from './_head'
+
+interface Links {
+  name: string,
+  url: string,
+  nextLink?: boolean
+}
 
 const Home: NextPage = () => {
-  return (
-    <div className={styles.home}>
-      <Header/>
-      <Greeting/>
+  const links: Links[] = [{
+    name: "Email",
+    url: "mailto:hi@kevle.xyz"
+  },
+  {
+    name: "GitHub",
+    url: "https://github.com/kevinle-1"
+  },
+  {
+    name: "LinkedIn",
+    url: "https://www.linkedin.com/in/kevinle14/"
+  },
+  // {
+  //   name: "Resume",
+  //   url: "/"
+  // },
+  {
+    name: "Blog",
+    url: "/blog",
+    nextLink: true
+  }];
 
-      <div className={styles.tao}>
-        <Tao/>
+  return (
+    <div className={styles.container}>
+      <PageHead description="Software Engineer"/>
+
+      <Header title="Software Engineer"/>
+      <Sidebar sidebarOnly={true} mobileShowIcons={true}/>
+      <div className="links">
+        { links.map(l =>
+          l.nextLink == null || l.nextLink == false ?
+          <span><a href={l.url} target="_blank">{l.name}</a></span> :
+          <span><Link href={l.url}>{l.name}</Link></span>
+        )}
       </div>
 
-      {/* <Link href="/page">
-        etc
-      </Link> */}
+      <div className="chevron">
+        <Chevron/>
+      </div>
     </div>
   )
 }

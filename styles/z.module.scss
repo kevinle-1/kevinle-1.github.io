@@ -1,0 +1,49 @@
+.container {
+    width: 14em;
+    height: 18em;
+
+    position: absolute;
+    top:0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    text-align: center;
+
+    margin: auto;
+
+    :global #title {
+        font-family: 'Syne', sans-serif;
+        font-size: 16pt;
+        font-weight: bold;
+
+        text-transform: uppercase;
+
+        margin-bottom: 3em;
+    }
+
+    :global #k svg {
+        height: 2.5em;
+    }
+
+    :global #socials {
+        margin-top: 3em;
+
+        :global svg {
+            height: 2em;
+            padding: 0.5em;
+            cursor: pointer;
+        }
+
+        :global svg:hover {
+            filter: invert(0) !important;
+            transition: 1s filter linear;
+          }
+
+          :global span:hover > svg {
+            filter: invert(1);
+
+            transition: 0.1s filter linear;
+          }
+    }
+}

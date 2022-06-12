@@ -1,26 +1,40 @@
-.home {
-    overflow-x: hidden;
+@import "_variables.scss";
+
+.container {
+    margin: $margin;
+    font-family: $font-family;
+    font-size: $font-size;
+
+    :global .links {
+        display: flex;
+
+        position: absolute;
+        bottom: $margin;
+
+        text-transform: uppercase;
+        font-weight: bold;
+        column-gap: 5.5em; // Align the 2nd element in links with the header title
+    }
+
+    :global .chevron svg {
+        position: absolute;
+        bottom: $margin;
+        right: $margin;
+
+        height: 1em;
+    }
 }
 
-.tao {
-    min-width: 50em;
-    max-width: 90em;
-    width: 80%;
+@media only screen and (max-width: 45em) {
+    .container {
 
-    position: absolute;
-    left: 50%;
+        :global .links {
+            flex-flow: wrap;
+            width: 10em;
 
-    bottom: 0;
-    margin-bottom: -3em;
-
-    position: fixed;
-    -webkit-transform: translateX(-50%);
-    transform: translateX(-50%);
-
-    z-index: -10;
-
-    :global svg {
-        height: 80%;
-
+            span {
+                padding-top: $margin-half; // Increase touch surface area
+            }
+        }
     }
 }

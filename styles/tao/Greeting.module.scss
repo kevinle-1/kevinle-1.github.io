@@ -1,0 +1,44 @@
+.greeting {
+    margin-top: 7%;
+    text-align: center;
+
+    :global #flag {
+        font-size: 24pt;
+
+    }
+
+    :global #text {
+        font-size: 64pt;
+        font-weight: 500;
+
+        text-transform: capitalize;
+    }
+
+    :global #language {
+        opacity: 0.15;
+
+        span {
+            text-transform: capitalize;
+
+        }
+    }
+}
+
+@media only screen and (max-width: 45em) {
+    .greeting {
+        margin-top: 20%;
+
+        text-align: left;
+
+        :global #text {
+            font-size: 52pt;
+            margin-left: -0.07em;
+        }
+    }
+}
+
+@media (max-height: 50em) {
+    .greeting {
+        margin-top: 12%;
+    }
+}
