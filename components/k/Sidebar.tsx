@@ -40,7 +40,7 @@ const Sidebar = (props: SidebarOptions) => {
           {theme === 'light' || theme === undefined ? <LightOn/> : <LightOff/>}
         </span>
         <span id="rewind">
-          <Link href="/95">
+          <Link href="/95" passHref={true}>
             <Rewind/>
           </Link>
         </span>

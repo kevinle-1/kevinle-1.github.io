@@ -47,7 +47,7 @@ const Home: NextPage = () => {
       <div className="links">
         { links.map(l =>
           l.nextLink == null || l.nextLink == false ?
-          <span><a href={l.url} target="_blank">{l.name}</a></span> :
+          <span><a href={l.url} target="_blank" rel="noreferrer">{l.name}</a></span> :
           <span><Link href={l.url}>{l.name}</Link></span>
         )}
       </div>

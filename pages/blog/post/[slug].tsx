@@ -54,7 +54,7 @@ export const Post = ({ frontmatter, content, slug }: any) => {
         <div className="body">
           <h1>{frontmatter.title}</h1>
           <div className="metadata">
-            <strong>{frontmatter.date} · {readingTime(content)} Minutes · <a id="edit" href={src} target="_blank">Edit</a></strong>
+            <strong>{frontmatter.date} · {readingTime(content)} Minutes · <a id="edit" href={src} target="_blank" rel="noreferrer">Edit</a></strong>
           </div>
           <div dangerouslySetInnerHTML={{ __html: md().render(content) }} />
           <div className="chevron"><Chevron/></div>
