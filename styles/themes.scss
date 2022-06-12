@@ -1,0 +1,125 @@
+// There is a lot of repetition here, determine approach to reduce
+
+body {
+    color: #000;
+    background-color: #fafafa;
+
+    ::selection {
+        color: #fafafa;
+        background: #000;
+    }
+
+    #tao svg {
+        color: #f7f7f7;
+    }
+
+    a:hover {
+        cursor: pointer;
+        color: #fafafa;
+        background-color: #000;
+    }
+
+    .link:hover {
+        cursor: pointer;
+        color: #fafafa;
+        background-color: #000;
+    }
+
+    code {
+        background-color: #f1f1f1;
+    }
+
+    pre {
+        background-color: #f1f1f1;
+    }
+}
+
+[data-theme='dark'] body {
+    color: #FFF;
+    background-color: #0a0a0a;
+
+    ::selection {
+        color: #000;
+        background: #FFF;
+    }
+
+    #tao svg {
+        color: #111111;
+    }
+
+    a:hover {
+        cursor: pointer;
+        color: #000;
+        background-color: #FFF;
+    }
+
+    .link:hover {
+        cursor: pointer;
+        color: #000;
+        background-color: #FFF;
+    }
+
+    code {
+        background-color: #1d1d1d;
+    }
+
+    pre {
+        background-color: #1d1d1d;
+    }
+}
+
+[data-theme='ikea'] body {
+    color: #f7f7f7;
+    background-color: #003399;
+
+    ::selection {
+        color: #003399;
+        background: #FFCC00;
+    }
+
+    #tao svg {
+        color: #FFCC00;
+    }
+}
+
+[data-theme='spotify'] body {
+    color: #f7f7f7;
+    background-color: #212121;
+
+    ::selection {
+        color: #212121;
+        background: #1DB954;
+    }
+
+    #tao svg {
+        color: #1DB954;
+    }
+}
+
+[data-theme='netflix'] body {
+    color: #f7f7f7;
+    background-color: #000000;
+
+    ::selection {
+        color: #000000;
+        background: #DB0000;
+    }
+
+    #tao svg {
+        color: #DB0000;
+    }
+}
+
+[data-theme='amazon'] body {
+    color: #f7f7f7;
+    background-color: #232F3E;
+
+    ::selection {
+        color: #232F3E;
+        background: #FF9900;
+    }
+
+    #tao svg {
+        color: #FF9900;
+    }
+}

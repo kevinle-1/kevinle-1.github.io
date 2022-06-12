@@ -1,0 +1,23 @@
+.header {
+    display: flex;
+    width: 100%;
+
+    text-transform: uppercase;
+    font-weight: bold;
+
+    :global #name {
+        position:fixed;
+    }
+
+    :global #title {
+        margin-left: 9.2em;
+    }
+}
+
+@media only screen and (max-width: 45em) {
+    .header {
+        :global #name {
+            position: absolute;
+        }
+    }
+}

@@ -1,0 +1,35 @@
+@import "../_variables.scss";
+
+.blog {
+    margin: $margin;
+    font-family: $font-family;
+    font-size: $font-size;
+
+    :global .posts {
+        margin-top: 2em;
+        margin-left: $approx-second-column;
+
+        list-style: none;
+        padding: 0;
+
+        max-width: 22em;
+
+        li {
+            margin-top: 2em;
+        }
+
+        #title {
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+    }
+}
+
+@media only screen and (max-width: 45em) {
+    .blog {
+        :global .posts {
+            margin-top: $margin;
+            margin-left: 0;
+        }
+    }
+}
