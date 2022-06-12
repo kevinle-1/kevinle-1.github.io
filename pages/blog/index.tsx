@@ -41,10 +41,10 @@ const Blog: NextPage = ({ posts }: any) => { // Sorry
         <FadeIn>
         {
           posts.map(({ slug, frontmatter }: any) => ( // Sorry
-            <li>
+            <li key={slug}>
               <div>
                 <span id="date">{frontmatter.date}</span><br/>
-                <Link href={`/blog/post/${slug}`}>
+                <Link href={`/blog/post/${slug}`} passHref={true}>
                   <span className='link' id="title">{frontmatter.title}</span>
                 </Link>
               </div>

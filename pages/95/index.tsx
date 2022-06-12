@@ -17,22 +17,16 @@ import { createGlobalStyle, ThemeProvider } from 'styled-components';
 
 import { useEffect, useState } from 'react'
 
-import {
-  AppBar,
-  TextField,
-  Button,
-  Window,
-  WindowContent,
-  WindowHeader,
-  Panel,
-  Progress
-} from 'react95';
-
+// React95 doesn't have type declarations :( - https://github.com/arturbien/React95/issues/205
+// @ts-ignore
+import { AppBar, TextField, Button, Window, WindowContent, WindowHeader, Panel, Progress } from 'react95';
+// @ts-ignore
 import original from "react95/dist/themes/original";
+
 import Head from 'next/head';
 import Link from 'next/link';
 
-const w95: NextPage = () => {
+const W95: NextPage = () => {
   const [starting, setStarting] = useState(false);
 
   useEffect(() => {
@@ -92,7 +86,7 @@ const Desktop = () => {
          <Window className='window'>
           <WindowHeader className='window-header'>
             <span id="title">HamsterScape Navigator</span>
-            <Link href="/">
+            <Link href="/" passHref={true}>
               <Button className='close-icon'>
                 <span>×</span>
               </Button>
@@ -133,7 +127,7 @@ const Desktop = () => {
       <AppBar id="taskbar">
         <div id="container">
           <Button id="start">
-              <img id="icon"
+              <Image id="icon"
               src="data:image/png;base64,AAABAAEAEBAQAAEABAAoAQAAFgAAACgAAAAQAAAAIAAAAAEABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA/wAAAAAA/wAA/wAAAP//AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEREAEAAEABAQEQARAEQAEAAAABEARAAAIiIAAQBAACAgIgAAAAAAIAAAACAAAwAAAAAAIgAzAAAAAAAiADMAAAAAAAIAMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD//wAAwf4AAFB4AAB8AAAAwAAAAFAAAAB8AAAAwAAAAFAAAAB8AAAAwAAAAFAAAAB8AAAA/gEAAP+HAAD//wAA" alt="data:image/png;base64,AAABAAEAEBAQAAEABAAoAQAAFgAAACgAAAAQAAAAIAAAAAEABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA/wAAAAAA/wAA/wAAAP//AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEREAEAAEABAQEQARAEQAEAAAABEARAAAIiIAAQBAACAgIgAAAAAAIAAAACAAAwAAAAAAIgAzAAAAAAAiADMAAAAAAAIAMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD//wAAwf4AAFB4AAB8AAAAwAAAAFAAAAB8AAAAwAAAAFAAAAB8AAAAwAAAAFAAAAB8AAAA/gEAAP+HAAD//wAA"/>
               Start
           </Button>
@@ -149,11 +143,11 @@ const Desktop = () => {
 
 const RetroPage = () => {
   return <div id="retro">
-    <h1>Kevin's Amazing Website</h1>
+    <h1>Kevin&apos;s Amazing Website</h1>
 
     <a href="https://www.youtube.com/watch?v=p3G5IXn0K7A">
       <div id="hamsters">
-        {[...Array(8)].map(() => <Image src={Hamster}/>)}
+        {[...Array(8)].map((idx) => <Image alt="Hamster" key={idx} src={Hamster}/>)}
       </div>
     </a>
 
@@ -162,24 +156,24 @@ const RetroPage = () => {
 
     <div id="email">
       <a href="mailto:contact@kevinle.com.au">
-        <Image src={Email}/>
+        <Image alt="Email Icon" src={Email}/>
       </a>
     </div>
-    <Image src={Globe}/><br/>
+    <Image alt="Globe" src={Globe}/><br/>
 
     <div id="footer">
-      <Image src={Cat}/>
-      <Image src={Share}/>
-      <Image src={Www}/>
-      <Image src={Netscape}/>
-      <Image src={Welcome}/>
+      <Image alt="Cat" src={Cat}/>
+      <Image alt="Share Button" src={Share}/>
+      <Image alt="Www Button" src={Www}/>
+      <Image alt="Netscape Button" src={Netscape}/>
+      <Image alt="Welcome sign" src={Welcome}/>
     </div>
   </div>
 }
 
 const Starting = () => {
   return <div id="startup">
-    <Image src={Start}/>
+    <Image alt="Startup screen" src={Start}/>
   </div>
 }
 
@@ -200,4 +194,4 @@ function formatAMPM(): string {
   return date.toLocaleString('en-US', { hour: 'numeric', minute: 'numeric', hour12: true })
 }
 
-export default w95
+export default W95
