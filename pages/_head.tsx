@@ -12,16 +12,17 @@ const PageHead = (props: HeadAttributes) => {
     "Kevin Le";
 
   const ogImage = props.og != null ?
-    `https://kevinle-og-image.vercel.app/${props.og}.png?theme=dark` : // Generate OG
+    `https://og.kevle.xyz/${props.og}.png?theme=dark` : // Generate OG
     "/og.jpg";
 
   return (
     <Head>
       <title>{pageName}</title>
-      <meta name="theme-color" content="#000000" />
-      <meta property="og:title" content={pageName} key="title" />
+      <meta name="theme-color" content="#000000"/>
+      <meta property="og:title" content={pageName} key="title"/>
       <meta property="og:description" content={props.description}/>
-      <meta property="og:image" content={ogImage} />
+      <meta property="og:image" content={ogImage}/>
+      <meta name="twitter:card" content="summary_large_image"/>
     </Head>
   )
 }

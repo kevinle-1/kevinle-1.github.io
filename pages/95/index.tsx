@@ -27,7 +27,7 @@ import Head from 'next/head';
 import Link from 'next/link';
 
 const W95: NextPage = () => {
-  const [starting, setStarting] = useState(false);
+  const [starting, setStarting] = useState(true);
 
   useEffect(() => {
     Sleep(2000).then(_ => (setStarting(false)))
@@ -55,7 +55,7 @@ interface Frame {
 const Desktop = () => {
   const [percent, setPercent] = useState(0);
   const [showFrame, setShowFrame] = useState(false);
-  const [showWindow, setShowWindow] = useState(true);
+  const [showWindow, setShowWindow] = useState(false);
 
   const [url, setUrl] = useState('www.google.com');
   const [submittedUrl, setSubmittedUrl] = useState('www.google.com');
@@ -79,8 +79,6 @@ const Desktop = () => {
   return <div id="desktop">
     <audio autoPlay src="/assets/audio/start.mp3" />
     <ThemeProvider theme={original}>
-
-
        {
          showWindow ?
          <Window className='window'>
