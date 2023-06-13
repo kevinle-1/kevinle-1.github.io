@@ -22,11 +22,11 @@ const Home: NextPage = () => {
   },
   {
     name: "GitHub",
-    url: "https://github.com/kevinle-1"
+    url: "https://github.com/kevle1"
   },
   {
     name: "LinkedIn",
-    url: "https://www.linkedin.com/in/kevinle14/"
+    url: "https://www.linkedin.com/in/kevle1/"
   },
   // {
   //   name: "Resume",
