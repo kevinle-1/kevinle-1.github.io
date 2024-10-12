@@ -1,86 +1,86 @@
 @import "../_variables.scss";
 
 .sidebar {
-    height: 5em;
-    margin-top: $approx-centre;
+  height: 5em;
+  margin-top: $approx-centre;
 
-    display: flex;
-    position: fixed;
+  display: flex;
+  position: fixed;
 
-    top: 0;
-    bottom: $margin;
-    left: 0;
-    right: 0;
+  top: 0;
+  bottom: $margin;
+  left: 0;
+  right: 0;
 
+  justify-content: space-between;
 
-    justify-content: space-between;
+  :global .icons {
+    text-orientation: sideways-left;
+    writing-mode: vertical-lr;
 
-    :global .icons {
-        text-orientation: sideways-left;
-        writing-mode: vertical-lr;
+    height: 10em;
 
-        height: 10em;
+    margin-top: -0.5em;
+    margin-left: $margin-half;
 
-        margin-top: -0.5em;
-        margin-left: $margin-half;
-
-        :global #light {
-            svg {
-                height: 1.6em;
-            }        }
-
-        :global #rewind svg {
-            margin-top: $margin-half;
-            height: 1.8em;
-        }
-
-        :global #translate svg {
-            margin-top: $margin-half;
-            height: 1.3em;
-        }
-
-        :global svg {
-            opacity: 0.15;
-        }
-
-        :global svg:hover {
-            opacity: 1;
-            cursor: pointer;
-        }
+    :global #light {
+      svg {
+        height: 1.6em;
+      }
     }
 
-    :global .copy {
-        margin-right: $margin-half;
-
-        text-orientation: sideways-right;
-        writing-mode: vertical-rl;
-
-        font-size: 14pt;
-        font-weight: bold;
-
-        opacity: 0.15;
+    :global #rewind svg {
+      margin-top: $margin-half;
+      height: 1.8em;
     }
 
-    :global .k {
-        animation: fadeIn 1s;
+    :global #translate svg {
+      margin-top: $margin-half;
+      height: 1.3em;
     }
 
-    :global .k svg {
-        height: 2em;
-        margin: auto;
-
-        margin-top: 1em;
+    :global svg {
+      opacity: 0.15;
     }
+
+    :global svg:hover {
+      opacity: 1;
+      cursor: pointer;
+    }
+  }
+
+  :global .copy {
+    margin-right: $margin-half;
+
+    text-orientation: sideways-right;
+    writing-mode: vertical-rl;
+
+    font-size: 14pt;
+    font-weight: bold;
+
+    opacity: 0.15;
+  }
+
+  :global .k {
+    animation: fadeIn 1s;
+  }
+
+  :global .k svg {
+    height: 2em;
+    margin: auto;
+
+    margin-top: 1em;
+  }
 }
 
 #hide {
-    width: 3em;
+  width: 3em;
 }
 
 @media only screen and (max-width: 45em) {
-    .sidebar {
-        :global .hideMobile {
-            visibility: hidden;
-        }
+  .sidebar {
+    :global .hideMobile {
+      visibility: hidden;
     }
+  }
 }

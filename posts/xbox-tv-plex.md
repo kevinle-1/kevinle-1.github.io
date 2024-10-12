@@ -1,9 +1,9 @@
 ---
-title: 'Using an Xbox TV Tuner with TVHeadEnd and Plex'
-metaTitle: 'Using an Xbox TV Tuner with TVHeadEnd and Plex'
-metaDesc: 'A cost effective way to get over the air TV on your media server'
-album: 'https://imgur.com/a/2ne3AcJ'
-date: '2022-06-11'
+title: "Using an Xbox TV Tuner with TVHeadEnd and Plex"
+metaTitle: "Using an Xbox TV Tuner with TVHeadEnd and Plex"
+metaDesc: "A cost effective way to get over the air TV on your media server"
+album: "https://imgur.com/a/2ne3AcJ"
+date: "2022-06-11"
 ---
 
 Plex is a great solution for aggregating movies, TV shows and music. As part of its premium offering, Plex Pass, it also integrates live TV and a DVR into a nice UI. I wanted to use these features to watch and record sports and local shows that weren't accessible via streaming services.
@@ -17,7 +17,6 @@ To get started with adding live TV to Plex, we require a compatible network-atta
 The cheapest available tuner Plex officially supports is AUD$110 - for occasionally recording [the footy](https://en.wikipedia.org/wiki/Australian_Football_League), this wasn't something I wanted to go with. Since you could find USB TV tuners on AliExpress and eBay for under AUD$15, I was sure I could find a cheaper solution.
 
 That led to me discovering the Xbox TV Tuner, a little USB dongle that Microsoft sells to integrate over the air TV with the Xbox. This dongle uses a very well documented [Panasonic MN88472](https://linuxtv.org/wiki/index.php/Panasonic_MN88472) chip with stable drivers, it's still being manufactured and best of all, it retails for AUD$10-20 here in Australia.
-
 
 Plex isn't able to integrate directly with a USB TV tuner, so we need to have TVHeadEnd act as a middleman for us. TVHeadEnd reads our tuner and then publishes it as an internet stream. We also need a proxy for Plex to hook into TVHeadEnd (which presents itself as a device that Plex supports).
 
@@ -109,7 +108,7 @@ Click the **Configuration** tab, then **DVB Inputs**, then **Networks**
 
 You should see the new network created and listed in the table.
 
-*Note: If you are in North America, instead of selecting "DVB-T Network", select "ATSC-T Network".*
+_Note: If you are in North America, instead of selecting "DVB-T Network", select "ATSC-T Network"._
 
 #### Enabling Tuner and Attaching Network
 
@@ -127,7 +126,7 @@ You should see your Xbox TV tuner, listed as the Panasonic chipset. Both adapter
 
 Your tuner should now be enabled - Notice the green dot next to the adapter.
 
-*Note: If you are using DVB-C, change the previous network configuration where applicable.*
+_Note: If you are using DVB-C, change the previous network configuration where applicable._
 
 #### Running a Scan and Adding Channels
 
@@ -181,6 +180,7 @@ INFO:root:Sending alive notification for uuid:12345678::upnp:rootdevice
 INFO:root:SSDP command NOTIFY * - from YOUR_IP:1900
 INFO:root:SSDP command NOTIFY * - from YOUR_IP:1900
 ```
+
 4. Edit the `tvhProxy.service` file with correct paths (`WorkingDirectory` & `ExecStart`)
 5. Make sure the `tvhProxy.sh` file is executable with `chmod +x tvhProxy.sh`
 6. Register the proxy as a service by running the following commands:

@@ -1,14 +1,15 @@
-import '../styles/_globals.scss'
-import '../styles/themes.scss'
+import "../styles/_globals.scss";
+import "../styles/themes.scss";
 
-import type { AppProps } from 'next/app'
-import { ThemeProvider } from 'next-themes'
+import type { AppProps } from "next/app";
+import { ThemeProvider } from "next-themes";
 
 function MyApp({ Component, pageProps }: AppProps) {
-
-  return <ThemeProvider defaultTheme="system">
+  return (
+    <ThemeProvider defaultTheme="system">
       <Component {...pageProps} />
     </ThemeProvider>
+  );
 }
 
-export default MyApp
+export default MyApp;
