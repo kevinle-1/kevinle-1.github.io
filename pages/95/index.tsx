@@ -12,10 +12,10 @@ import Share from "../../assets/img/95/share.png";
 import Welcome from "../../assets/img/95/welcome.gif";
 import Www from "../../assets/img/95/www.png";
 
-import styles from "../../styles/95.module.scss";
-import { createGlobalStyle, ThemeProvider } from "styled-components";
-
+import { ThemeProvider } from "styled-components";
 import { useEffect, useState } from "react";
+
+import styles from "./95.module.scss";
 
 // React95 doesn't have type declarations :( - https://github.com/arturbien/React95/issues/205
 // @ts-ignore
@@ -49,10 +49,6 @@ const W95: NextPage = () => {
         <link rel="icon" href="/assets/icons/95.ico"></link>
         <meta name="theme-color" content="#008080" />
         <meta property="og:title" content="Kev 95" key="title" />
-        <meta
-          property="og:description"
-          content="Travel back in time to some teal goodness"
-        />
         <meta property="og:image" content="/og95.jpg" />
       </Head>
       {starting ? <Starting /> : <Desktop />}
@@ -73,7 +69,7 @@ const Desktop = () => {
   const [submittedUrl, setSubmittedUrl] = useState("www.google.com");
 
   function handleClick() {
-    setPercent(50); // TODO: see if we can check iFrames for loading state
+    setPercent(50);
     setSubmittedUrl(url);
     setShowFrame(true);
     setPercent(100);
@@ -87,7 +83,6 @@ const Desktop = () => {
     Sleep(1000).then((_) => setShowWindow(true));
   });
 
-  // Autoplay often blocked by browsers
   return (
     <div id="desktop">
       <audio autoPlay src="/assets/audio/start.mp3" />
@@ -148,6 +143,8 @@ const Desktop = () => {
             <Button id="start">
               <Image
                 id="icon"
+                height={16}
+                width={16}
                 src="data:image/png;base64,AAABAAEAEBAQAAEABAAoAQAAFgAAACgAAAAQAAAAIAAAAAEABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA/wAAAAAA/wAA/wAAAP//AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEREAEAAEABAQEQARAEQAEAAAABEARAAAIiIAAQBAACAgIgAAAAAAIAAAACAAAwAAAAAAIgAzAAAAAAAiADMAAAAAAAIAMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD//wAAwf4AAFB4AAB8AAAAwAAAAFAAAAB8AAAAwAAAAFAAAAB8AAAAwAAAAFAAAAB8AAAA/gEAAP+HAAD//wAA"
                 alt="data:image/png;base64,AAABAAEAEBAQAAEABAAoAQAAFgAAACgAAAAQAAAAIAAAAAEABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA/wAAAAAA/wAA/wAAAP//AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEREAEAAEABAQEQARAEQAEAAAABEARAAAIiIAAQBAACAgIgAAAAAAIAAAACAAAwAAAAAAIgAzAAAAAAAiADMAAAAAAAIAMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD//wAAwf4AAFB4AAB8AAAAwAAAAFAAAAB8AAAAwAAAAFAAAAB8AAAAwAAAAFAAAAB8AAAA/gEAAP+HAAD//wAA"
               />
@@ -179,12 +176,15 @@ const RetroPage = () => {
       <h2>welcome to my internet home</h2>
 
       <div id="email">
-        <a href="mailto:contact@kevinle.com.au">
+        <a href="mailto:95@kevle.xyz">
           <Image alt="Email Icon" src={Email} />
         </a>
       </div>
-      <Image alt="Globe" src={Globe} />
       <br />
+
+      <div id="globe">
+        <Image alt="Globe" src={Globe} />
+      </div>
 
       <div id="footer">
         <Image alt="Cat" src={Cat} />

@@ -1,8 +1,4 @@
 import type { NextPage } from "next";
-import Header from "../../components/k/Header";
-import Sidebar from "../../components/k/Sidebar";
-
-import styles from "../../styles/k/Blog.module.scss";
 
 import fs from "fs";
 import matter from "gray-matter";
@@ -30,13 +26,9 @@ export const getStaticProps = () => {
 };
 
 const Blog: NextPage = ({ posts }: any) => {
-  // Sorry
   return (
-    <div className={styles.blog}>
+    <div>
       <PageHead pageName="Blog" description="Random posts" appendName={true} />
-      <Header title="blog" />
-      <Sidebar sidebarOnly={false} mobileShowIcons={false} />
-
       <ul className="posts">
         {posts.map(
           (

@@ -1,29 +1,53 @@
-// @font-face {
-//   font-family: mbp;
-//   src: url('/assets/fonts/mbp_medium.woff2');
-// }
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import "_variables.scss";
+
+@font-face {
+  font-family: "Geist Sans";
+  src: url("/assets/fonts/geist_sans_wght.woff2");
+  font-weight: 100 900;
+}
 
 body {
   padding: 0;
   margin: 0;
-
   transition: all 0.3s;
+  cursor: crosshair;
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
+.link:hover {
+  cursor: pointer;
+  background-color: $dark;
+  color: $light;
 }
 
-* {
-  box-sizing: border-box;
+.dark .link:hover {
+  background-color: $light;
+  color: $dark;
 }
 
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
+::selection,
+.dark ::selection {
+  background: $dark;
+  color: $light;
+}
+
+.dark ::selection {
+  background: $light;
+  color: $dark;
+}
+
+.map .leaflet-control-attribution {
+  display: none;
+}
+
+.map .circle.leaflet-interactive {
+  stroke: $dark;
+  fill: none;
+  stroke-width: 1.2px;
+}
+
+.dark .circle.leaflet-interactive {
+  stroke: $light;
 }

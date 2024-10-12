@@ -1,11 +1,7 @@
 import fs from "fs";
 import matter from "gray-matter";
 import md from "markdown-it";
-import Header from "../../../components/k/Header";
-import Sidebar from "../../../components/k/Sidebar";
-import Chevron from "../../../assets/img/chevron.svg";
 
-import styles from "../../../styles/k/Post.module.scss";
 import PageHead from "../../_head";
 
 export const getStaticPaths = () => {
@@ -44,14 +40,13 @@ export const Post = ({ frontmatter, content, slug }: any) => {
   const src = `https://github.com/kevinle-1/kevinle-1.github.io/blob/main/posts/${slug}.md?plain=1`;
 
   return (
-    <div className={styles.post}>
+    <div>
       <PageHead
         pageName={frontmatter.title}
         description={frontmatter.metaDesc}
         og={frontmatter.title}
         appendName={false}
       />
-      <Header title={"blog"} />
       <div className="body">
         <h1>{frontmatter.title}</h1>
         <div className="metadata">
@@ -63,11 +58,7 @@ export const Post = ({ frontmatter, content, slug }: any) => {
           </strong>
         </div>
         <div dangerouslySetInnerHTML={{ __html: md().render(content) }} />
-        <div className="chevron">
-          <Chevron />
-        </div>
       </div>
-      <Sidebar sidebarOnly={false} mobileShowIcons={false} />
     </div>
   );
 };

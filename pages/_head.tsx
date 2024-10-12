@@ -3,7 +3,7 @@ import Head from "next/head";
 interface HeadAttributes {
   pageName?: string; // Name of page (To appear in tab title also)
   description: string;
-  appendName: boolean;
+  appendName?: boolean;
   og?: string; // Path or text to generate OpenGraph image
 }
 
