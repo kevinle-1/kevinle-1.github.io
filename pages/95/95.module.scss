@@ -1,0 +1,228 @@
+@font-face {
+  font-family: ms_sans_serif;
+  src: url("/assets/fonts/ms_sans_serif.woff2");
+}
+@font-face {
+  font-family: ms_sans_serif_bold;
+  src: url("/assets/fonts/ms_sans_serif_bold.woff2");
+}
+
+.win {
+  cursor: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAATAgMAAAA7Rx9DAAAACVBMVEUAAAAAAAD///+D3c/SAAAAAXRSTlMAQObYZgAAADtJREFUCB0FwTEBgDAMALDwTMTUVMIOJOxp1VTEOEAlicDCRqKCaupQL/WF+lo9tzzsZCUxgxmMZjRX/CMoDnKaXoKpAAAAAElFTkSuQmCC),
+    default !important;
+
+  width: 100vw;
+  height: 100vh;
+  background-color: black;
+
+  :global .close-icon {
+    display: inline-block;
+
+    margin-top: -1px;
+
+    transform: rotateZ(45deg);
+    position: relative;
+  }
+
+  :global #startup {
+    height: 40em;
+    width: 40em;
+
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    margin: auto;
+
+    :global img {
+      position: relative;
+    }
+  }
+
+  :global #desktop {
+    font-family: "ms_sans_serif";
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+
+    box-shadow: none;
+
+    background-color: #008080;
+
+    :global .window {
+      width: 50em;
+      height: 41em;
+
+      display: block;
+      margin-top: 2%;
+      margin-left: auto;
+      margin-right: auto;
+
+      padding: 0;
+      box-shadow: none;
+
+      #react_content {
+        padding: 0;
+
+        height: 100%;
+      }
+
+      #content {
+        height: 100%;
+
+        #url {
+          width: 100%;
+        }
+
+        #page {
+          width: 100%;
+          height: 35em;
+
+          #retro {
+            height: 100%;
+
+            color: white;
+
+            text-align: center;
+            font-family: "Comic Sans MS";
+
+            padding-top: 4em;
+
+            background-image: url("/assets/img/stars.png");
+
+            h1,
+            h2 {
+              margin: 0;
+              font-weight: lighter;
+            }
+
+            #hamsters {
+              margin: 1em;
+              justify-content: center;
+
+              display: flex;
+            }
+
+            #email {
+              margin-top: 2em;
+              margin-bottom: 1em;
+
+              display: flex;
+              justify-content: center;
+
+              :hover {
+                color: #0078d7;
+              }
+            }
+
+            #globe {
+              display: flex;
+              justify-content: center;
+              margin-bottom: 5em;
+            }
+
+            #footer {
+              display: flex;
+              justify-content: center;
+              height: 2.5em;
+
+              bottom: 0;
+            }
+
+            #progress {
+              position: absolute;
+              right: 0;
+            }
+          }
+
+          #frame {
+            width: 100%;
+            height: 35em;
+          }
+        }
+      }
+
+      .window-header {
+        display: flex;
+        justify-content: space-between;
+
+        height: 1.8em;
+        font-size: 10pt;
+
+        padding-top: 0.15em;
+        line-height: normal;
+
+        .close-icon {
+          margin-top: -0.2em;
+          margin-right: -0.4em;
+          height: 1.5em;
+          transform: rotate(0);
+        }
+      }
+    }
+
+    :global #taskbar {
+      top: auto;
+      border: none;
+
+      bottom: 0;
+
+      height: 2em;
+
+      box-shadow: inset 1px 1px 0px 1px #dfdfdf;
+
+      :global #container {
+        display: float;
+
+        margin: 0.2em;
+
+        :global #icon {
+          margin-left: 0.2em;
+          margin-right: 0.2em;
+        }
+
+        #start {
+          font-family: "ms_sans_serif";
+          font-size: 12pt;
+
+          padding-top: 0.1em;
+          width: 3.6em;
+          height: 1.6em;
+        }
+
+        #start::before {
+          border: medium none;
+          box-shadow:
+            #ffffff 1px 1px 0px 1px inset,
+            #868a8e 0px 0px 0px 1px inset,
+            #000000 1px 1px 0px 0px;
+        }
+
+        #start::after {
+          outline: none;
+        }
+
+        #start:active {
+          background-color: #acacac !important;
+        }
+
+        #time {
+          border-width: 1px 1.5px 1.5px 1px;
+          border-color: #00000080 #ffffff #ffffff #00000080;
+          border-style: solid;
+
+          padding: 0.4em;
+          float: right;
+          font-size: 10pt;
+        }
+      }
+    }
+  }
+}
+
+.win ::selection {
+  color: white !important;
+  background: #0078d7 !important;
+}

@@ -1,14 +1,9 @@
-import '../styles/_globals.scss'
-import '../styles/themes.scss'
+import "../styles/_globals.scss";
 
-import type { AppProps } from 'next/app'
-import { ThemeProvider } from 'next-themes'
+import type { AppProps } from "next/app";
 
-function MyApp({ Component, pageProps }: AppProps) {
-
-  return <ThemeProvider defaultTheme="system">
-      <Component {...pageProps} />
-    </ThemeProvider>
+function App({ Component, pageProps }: AppProps) {
+  return <Component {...pageProps} />;
 }
 
-export default MyApp
+export default App;
