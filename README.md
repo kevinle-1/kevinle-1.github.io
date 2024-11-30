@@ -2,4 +2,4 @@
 
 ![Card](/public/og.jpg)
 
-© 2022
+© 2024

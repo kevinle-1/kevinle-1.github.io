@@ -50,6 +50,7 @@ const W95: NextPage = () => {
         <meta name="theme-color" content="#008080" />
         <meta property="og:title" content="Kev 95" key="title" />
         <meta property="og:image" content="/og95.jpg" />
+        <meta name="twitter:card" content="summary_large_image" />
       </Head>
       {starting ? <Starting /> : <Desktop />}
     </div>
